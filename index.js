@@ -8,7 +8,7 @@ function myexpress() {
   
   app.listen = function (port, done) {
     var http = require("http");
-    var server = http.createServer(app);
+    var server = http.createServer(this);
     server.listen(port, done);
     return server;
   }
