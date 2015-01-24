@@ -17,7 +17,7 @@ function myexpress() {
       } else {
         if (err && app.stack[stackPos].length == 4) {
           app.stack[stackPos](err, req, res, next);
-        } else if (!err && app.stack[stackPos].length == 3) {
+        } else if (!err && app.stack[stackPos].length != 4) {
           try {
             app.stack[stackPos](req, res, next);
           } catch (e) {
